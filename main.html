@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viandas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Viandas</h1>
+
+    <div class="row m-2">
+        <div class="col-6">
+
+            <h2>LUNES</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card mt-1 h-100" >
+                        <div class="card-body  d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Tradicional</h5>
+                            <p class="card-text">Milanesa de carne a la pizza con papas al horno</p>
+                            <div class="row">
+                                    <div class="w-50">Media</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="agregarVianda('media','lunes', 'tradicional')" id="btnAgregar">+</button>
+                                        <label id="lunes_medias_tradicional">0</label>
+                                        <button class="badge btn btn-dark badge-dark" onclick="restarVianda('media', 'lunes', 'tradicional')" id="btnRestar">-</button>
+                                    </div>
+                                    <div class="w-50">Entera</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="agregarVianda('entera','lunes', 'tradicional')" id="btnAgregar">+</button>
+                                        <label id="lunes_enteras_tradicional">0</label>
+                                        <button class="badge btn btn-dark badge-dark" onclick="restarVianda('entera','lunes', 'tradicional')" id="btnRestar">-</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card mt-1  h-100" >
+                        <div class="card-body  d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Light</h5>
+                            <p class="card-text">Milanesa de berenjena a la pizza con ensalada</p>
+                            <div class="row">
+                                    <div class="w-50">Media</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="agregarVianda('media','lunes', 'light')" id="btnAgregar">+</button>
+                                        <label id="lunes_medias_light">0</label>
+                                        <button class="badge btn btn-dark badge-dark" onclick="restarVianda('media','lunes', 'light')" id="btnRestar">-</button>
+                                    </div>
+                                    <div class="w-50">Entera</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="agregarVianda('entera','lunes', 'light')" id="btnAgregar">+</button>
+                                        <label id="lunes_enteras_light">0</label>
+                                        <button class="badge btn btn-dark badge-dark" onclick="restarVianda('entera','lunes', 'light')" id="btnRestar">-</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <h2>MARTES</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card mt-1 h-100" >
+                        <div class="card-body  d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Tradicional</h5>
+                            <p class="card-text">Menú 3</p>
+                            <div class="row">
+                                    <div class="w-50">Media</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                                    <div class="w-50">Entera</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card mt-1  h-100" >
+                        <div class="card-body  d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Light</h5>
+                            <p class="card-text">Menú 4</p>
+                            <div class="row">
+                                    <div class="w-50">Media</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                                    <div class="w-50">Entera</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <h2>MIÉRCOLES</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card mt-1 h-100" >
+                        <div class="card-body  d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Tradicional</h5>
+                            <p class="card-text">Menú 5</p>
+                            <div class="row">
+                                    <div class="w-50">Media</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                                    <div class="w-50">Entera</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card mt-1  h-100" >
+                        <div class="card-body  d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Light</h5>
+                            <p class="card-text">Menú 6</p>
+                            <div class="row">
+                                    <div class="w-50">Media</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                                    <div class="w-50">Entera</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <h2>JUEVES</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card mt-1 h-100" >
+                        <div class="card-body  d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Tradicional</h5>
+                            <p class="card-text">Menú 7</p>
+                            <div class="row">
+                                    <div class="w-50">Media</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                                    <div class="w-50">Entera</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card mt-1  h-100" >
+                        <div class="card-body  d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Light</h5>
+                            <p class="card-text">Menú 8</p>
+                            <div class="row">
+                                    <div class="w-50">Media</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                                    <div class="w-50">Entera</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <h2>VIERNES</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card mt-1 h-100" >
+                        <div class="card-body  d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Tradicional</h5>
+                            <p class="card-text">Menú 9</p>
+                            <div class="row">
+                                    <div class="w-50">Media</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                                    <div class="w-50">Entera</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card mt-1  h-100" >
+                        <div class="card-body  d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Light</h5>
+                            <p class="card-text">Menú 10</p>
+                            <div class="row">
+                                    <div class="w-50">Media</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                                    <div class="w-50">Entera</div>
+                                    <div class="w-50">
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnAgregar">+</button>
+                                        <button class="badge btn btn-dark badge-dark" onclick="" id="btnRestar">-</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+
+        <div class="col-6">
+            <div class="">
+                <h2>Precios</h2>
+                <h4>Media: 450$</h4>
+                <h4>Entera: 650$</h4>
+                <hr>
+            </div>
+
+            <div class="">
+                <label for="">Cantidad de pedidos: </label>
+                <label id="cantidad_pedidos"></label>
+            </div>
+
+            <div class="d-flex">
+                <h3>Precio Total: $</h3>
+                <h3 id="total"></h3>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-danger" onclick="vaciarCarrito()" >Vaciar Carrito</button>
+                <button type="button" class="btn btn-success" onclick="confirmarPedido()">Realizar Pedido</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js.js"></script>
+</body>
+</html>

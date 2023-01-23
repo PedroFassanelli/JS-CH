@@ -1,3 +1,4 @@
+/* PREENTREGA 1 */
 //Variables globales
 let precioTotal = 0
 document.getElementById('total').innerHTML = precioTotal
@@ -151,5 +152,110 @@ function confirmarPedido(){
     }
 }
 
+
+/* PREENTREGA 2 */
+//-----------------------------------------------
+//Creación del objeto vianda
+class Vianda{
+    constructor(dia, tamano, tipo, descripcion){
+        //propiedades
+        this.dia = dia.toUpperCase(),
+        this.tamano = tamano.toUpperCase(),
+        this.tipo = tipo.toUpperCase(),
+        this.descripcion = descripcion 
+    }
+}
+
+//Instancias del objeto
+const vianda1 = new Vianda("LUNES", "MEDIA", "TRADICIONAL", "Milanesa de carne a la pizza con papas al horno")
+const vianda2 = new Vianda("LUNES", "ENTERA", "TRADICIONAL", "Milanesa de carne a la pizza con papas al horno")
+const vianda3 = new Vianda("LUNES", "MEDIA", "LIGHT", "Milanesa de berenjena a la pizza con ensalada")
+const vianda4 = new Vianda("LUNES", "ENTERA", "LIGHT", "Milanesa de berenjena a la pizza con ensalada")
+
+
+//Estructura donde almacenamos toda las viandas
+//Array de objetos
+const menu = [vianda1, vianda2, vianda3, vianda4]
+console.log(menu)
+
+
+//Functions - Carga de viandas
+function cargarVianda(){
+    let diaIngresado = prompt("Ingrese el dia")
+    let tamanoIngresado = prompt("Ingrese el tamaño")
+    let tipoIngresado = prompt("Ingrese el tipo")
+    let descripcionIngresada = prompt("Ingrese la comida")
+
+    //Creamos el nuevo objeto
+    const viandaNueva = new Vianda(diaIngresado, tamanoIngresado, tipoIngresado, descripcionIngresada)
+
+    //Sumamos a los menus
+    menu.push(viandaNueva)
+    console.log(menu)
+}
+
+function verMenu(menu){
+    console.log("Bienvenido! Nuestro menu es:")
+    menu.forEach((vianda)=>{
+        console.log(vianda.dia, vianda.tamano, vianda.tipo, vianda.descripcion)
+    })
+}
+
+//Aplicación de filter
+function buscarPorDia(menu){
+    let diaBuscado = prompt("Ingrese el dia que desea buscar")
+    let diaEncontrado = menu.filter(
+        (vianda)=> vianda.dia == diaBuscado.toUpperCase()
+    )
+    //si hay coincidencia nos devuelve un array con los objetos, sino un array vacío
+    if(diaEncontrado.length == 0){
+        console.log(`No hay ninguna comida para el dia ${diaBuscado}`)
+    } else{  
+        console.log(diaEncontrado) 
+    }
+}
+
+function opciones(){
+    let salir = false
+    do{
+        salir = preguntarOpcion(salir)
+    } while(!salir)
+}
+
+function preguntarOpcion(salir){
+    let opcionIngresada = parseInt(prompt(`Ingrese la opción deseada
+        1 - Agregar vianda
+        2 - Borrar vianda
+        3 - Consultar menú
+        4 - Buscar por día
+        0 - Salir`))
+
+    switch(opcionIngresada){
+        case 1:
+            cargarVianda();
+            break
+        case 2:
+            //borrar vianda
+            break
+        case 3:
+            verMenu(menu)
+            break
+        case 4:
+            buscarPorDia(menu)
+            break
+        case 0:
+            console.log("Gracias por utilizar nuestra app!")
+            salir = true
+            return salir
+        default:
+            console.log("Ingrese una opción válida")
+            break
+    }
+
+}
+
+opciones()
+
+//------------------------------------------------- 
 
 

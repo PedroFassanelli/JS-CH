@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "dia": "LUNES",
+        "tamano": "MEDIA",
+        "tipo": "TRADICIONAL",
+        "descripcion": "Suprema de pollo a la pizza con papas al horno",
+        "precio": 450
+    },
+    {
+        "id": 2,
+        "dia": "LUNES",
+        "tamano": "ENTERA",
+        "tipo": "TRADICIONAL",
+        "descripcion": "Suprema de pollo a la pizza con papas al horno",
+        "precio": 650
+    },
+    {
+        "id": 3,
+        "dia": "LUNES",
+        "tamano": "MEDIA",
+        "tipo": "LIGHT",
+        "descripcion": "Milanesa de berenjena a la pizza con ensalada",
+        "precio": 450
+    },
+    {
+        "id": 4,
+        "dia": "LUNES",
+        "tamano": "ENTERA",
+        "tipo": "LIGHT",
+        "descripcion": "Milanesa de berenjena a la pizza con ensalada",
+        "precio": 650
+    },
+    {
+        "id": 5,
+        "dia": "MARTES",
+        "tamano": "MEDIA",
+        "tipo": "TRADICIONAL",
+        "descripcion": "Tallarines con salsa bolognesa",
+        "precio": 450
+    },
+    {
+        "id": 6,
+        "dia": "MARTES",
+        "tamano": "ENTERA",
+        "tipo": "TRADICIONAL",
+        "descripcion": "Tallarines con salsa bolognesa",
+        "precio": 650
+    },
+    {
+        "id": 7,
+        "dia": "MARTES",
+        "tamano": "MEDIA",
+        "tipo": "LIGHT",
+        "descripcion": "Torrejas de verduras con ensalada",
+        "precio": 450
+    },
+    {
+        "id": 8,
+        "dia": "MARTES",
+        "tamano": "ENTERA",
+        "tipo": "LIGHT",
+        "descripcion": "Torrejas de verduras con ensalada",
+        "precio": 650
+    },
+    {
+        "id": 9,
+        "dia": "MIERCOLES",
+        "tamano": "MEDIA",
+        "tipo": "TRADICIONAL",
+        "descripcion": "Pollo al puerro con bombas de papa",
+        "precio": 450
+    },
+    {
+        "id": 10,
+        "dia": "MIERCOLES",
+        "tamano": "ENTERA",
+        "tipo": "TRADICIONAL",
+        "descripcion": "Pollo al puerro con bombas de papa",
+        "precio": 650
+    },
+    {
+        "id": 11,
+        "dia": "MIERCOLES",
+        "tamano": "MEDIA",
+        "tipo": "LIGHT",
+        "descripcion": "Omelette de espinaca con salsa blanca y muzzarella",
+        "precio": 450
+    },
+    {
+        "id": 12,
+        "dia": "MIERCOLES",
+        "tamano": "ENTERA",
+        "tipo": "LIGHT",
+        "descripcion": "Omelette de espinaca con salsa blanca y muzzarella",
+        "precio": 650
+    },
+    {
+        "id": 13,
+        "dia": "JUEVES",
+        "tamano": "MEDIA",
+        "tipo": "TRADICIONAL",
+        "descripcion": "Mamona braseada con vegetales gratinados",
+        "precio": 450
+    },
+    {
+        "id": 14,
+        "dia": "JUEVES",
+        "tamano": "ENTERA",
+        "tipo": "TRADICIONAL",
+        "descripcion": "Mamona braseada con vegetales gratinados",
+        "precio": 650
+    },
+    {
+        "id": 15,
+        "dia": "JUEVES",
+        "tamano": "MEDIA",
+        "tipo": "LIGHT",
+        "descripcion": "Pizza integral napolitana",
+        "precio": 450
+    },
+    {
+        "id": 16,
+        "dia": "JUEVES",
+        "tamano": "ENTERA",
+        "tipo": "LIGHT",
+        "descripcion": "Pizza integral napolitana",
+        "precio": 650
+    },
+    {
+        "id": 17,
+        "dia": "VIERNES",
+        "tamano": "MEDIA",
+        "tipo": "TRADICIONAL",
+        "descripcion": "Milanesa a la pizza con puré",
+        "precio": 450
+    },
+    {
+        "id": 18,
+        "dia": "VIERNES",
+        "tamano": "ENTERA",
+        "tipo": "TRADICIONAL",
+        "descripcion": "Milanesa a la pizza con puré",
+        "precio": 650
+    },
+    {
+        "id": 19,
+        "dia": "VIERNES",
+        "tamano": "MEDIA",
+        "tipo": "LIGHT",
+        "descripcion": "Ensalada de la casa (hojas verdes, pollo, calabaza asada, queso y tostadas)",
+        "precio": 450
+    },
+    {
+        "id": 19,
+        "dia": "VIERNES",
+        "tamano": "ENTERA",
+        "tipo": "LIGHT",
+        "descripcion": "Ensalada de la casa (hojas verdes, pollo, calabaza asada, queso y tostadas)",
+        "precio": 650
+    }
+]

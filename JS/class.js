@@ -50,3 +50,4 @@ if(localStorage.getItem("menu")){
     //Cuando entra por primera vez
     cargarMenu()
 }
+

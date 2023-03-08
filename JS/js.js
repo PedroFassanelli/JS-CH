@@ -89,7 +89,7 @@ function buscarInfo(buscado, array){
         (vianda) => vianda.dia.toLowerCase().includes(buscado.toLowerCase()) || vianda.tipo.toLowerCase().includes(buscado.toLowerCase()) || vianda.tamano.toLowerCase().includes(buscado.toLowerCase())
     ) 
     
-    //equivalente con ternario
+    
     busquedaArray.length == 0 ? 
     (coincidencia.innerHTML = `<h3>No hay coincidencias con su búsqueda</h3>`, 
     mostrarMenu(busquedaArray)) 

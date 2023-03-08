@@ -41,6 +41,48 @@ function mostrarMenu(array){
     }
 }
 
+//CARRITO DE COMPRAS
+let productosEnCarrito = []
+if(localStorage.getItem("carrito")){
+    for(let vianda of JSON.parse(localStorage.getItem("carrito"))){
+        let cantStorage = vianda.cantidad
+        let viandaCarrito = new Vianda(vianda.id, vianda.dia, vianda.tamano, vianda.tipo, vianda.descripcion, vianda.precio)
+        viandaCarrito.cantidad = cantStorage
+        productosEnCarrito.push(viandaCarrito)
+    }
+}else{
+    productosEnCarrito = []
+}
+
+function agregarAlCarrito(vianda){
+ 
+    let viandaAgregada = productosEnCarrito.find((elem)=> elem.id == vianda.id)
+
+    if(viandaAgregada == undefined){
+        productosEnCarrito.push(vianda)
+        localStorage.setItem("carrito", JSON.stringify(productosEnCarrito))
+        
+        //Sweet Alert
+        Swal.fire({
+            title: "Vianda agregada al carrito",
+            text: `La vianda ${vianda.id} ha sido agregada.`,
+            icon: "success",
+            confirmButtonText: 'Entendido',
+            confirmButtonColor: "green",
+            timer: 3000
+        })
+    } else{
+        Swal.fire({
+            title: `Producto ya existente`,
+            text: `La vianda ${vianda.id} ya existe en el carrito.`,
+            icon: "info",
+            timer: 2000,
+
+        })
+    }
+
+}
+
 
 function cargarVianda(array){
     
@@ -98,47 +140,7 @@ function buscarInfo(buscado, array){
     mostrarMenu(busquedaArray))
 }
 
-//CARRITO DE COMPRAS
-let productosEnCarrito = []
-if(localStorage.getItem("carrito")){
-    for(let vianda of JSON.parse(localStorage.getItem("carrito"))){
-        let cantStorage = vianda.cantidad
-        let viandaCarrito = new Vianda(vianda.id, vianda.dia, vianda.tamano, vianda.tipo, vianda.descripcion, vianda.precio)
-        viandaCarrito.cantidad = cantStorage
-        productosEnCarrito.push(viandaCarrito)
-    }
-}else{
-    productosEnCarrito = []
-}
 
-function agregarAlCarrito(vianda){
- 
-    let viandaAgregada = productosEnCarrito.find((elem)=> elem.id == vianda.id)
-
-    if(viandaAgregada == undefined){
-        productosEnCarrito.push(vianda)
-        localStorage.setItem("carrito", JSON.stringify(productosEnCarrito))
-        
-        //Sweet Alert
-        Swal.fire({
-            title: "Vianda agregada al carrito",
-            text: `La vianda ${vianda.id} ha sido agregada.`,
-            icon: "success",
-            confirmButtonText: 'Entendido',
-            confirmButtonColor: "green",
-            timer: 3000
-        })
-    } else{
-        Swal.fire({
-            title: `Producto ya existente`,
-            text: `La vianda ${vianda.id} ya existe en el carrito.`,
-            icon: "info",
-            timer: 2000,
-
-        })
-    }
-
-}
 
 
 //MODAL CARRITO DE COMPRAS

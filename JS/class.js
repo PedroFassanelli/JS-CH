@@ -45,7 +45,10 @@ const cargarMenu = async ()=>{
 
 
 if(localStorage.getItem("menu")){
-    menu = JSON.parse(localStorage.getItem("menu"))
+    for(let vianda of JSON.parse(localStorage.getItem("menu"))){
+        let viandaNueva = new Vianda(vianda.id, vianda.dia, vianda.tamano, vianda.tipo, vianda.descripcion, vianda.precio)
+        menu.push(viandaNueva)
+    }
 } else {
     //Cuando entra por primera vez
     cargarMenu()
